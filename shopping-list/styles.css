@@ -1,0 +1,84 @@
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    font-family: cursive;
+}
+
+body {
+    background-color: thistle;
+}
+
+.container {
+    margin-top: 20rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hojaCompra {
+    width: 40rem;
+    height: auto;
+    padding: 2rem;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px violet;
+}
+
+h1 {
+    margin-bottom: 4rem;
+    font-family: "Gloria Hallelujah", cursive;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.formulario {
+    text-align: center;
+}
+
+input[type=text] {
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px blueviolet;
+}
+
+input[type=text]:focus {
+    background-color: pink;
+}
+
+li {
+    font-family: "Indie Flower", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.button {
+    margin-left: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: violet;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px blueviolet;
+    font-family: "Indie Flower", cursive;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.button:focus{
+    background-color: pink;
+}
+
+.productoFinal button {
+    padding: 0 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: red;
+    border: 1px solid transparent;
+    font-family: "Indie Flower", cursive;
+    font-weight: bold;
+    font-size: 2rem;
+}

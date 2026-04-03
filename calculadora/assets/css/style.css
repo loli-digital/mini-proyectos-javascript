@@ -1,0 +1,162 @@
+:root {
+    --bg-color: hsl(0, 4%, 9%);
+    /*--bg-color: hsl(0, 2%, 18%);*/
+    --hover-btn-color: hsl(0, 4%, 16%);
+    --igual-color: hsla(303, 58%, 43%, 0.66);
+    --hover-igual-color: hsla(303, 58%, 43%, 0.848);
+    --footer-color: hsla(266, 58%, 43%, 0.426);
+    --color-text: hsl(0, 0%, 100%);
+    --font-family: 'Courier New', Courier, monospace;
+    --border-radius: 5px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    padding: 1rem 0;
+    font-size: 4rem;
+    text-align: center;
+    color: var(--color-text);
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.layout {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+
+    .calculadora {
+        width: 35rem;
+        padding: 3rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+        background-color: var(--footer-color);
+        border-radius: 10px;
+
+        .pantalla {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            grid-column: 1 / -1;
+            text-align: right;
+            background-color: var(--bg-color);
+            color: var(--color-text);
+            font-weight: bold;
+            font-size: 2rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .btn {
+            padding: 1.5rem 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 2rem;
+            font-weight: bold;
+            background-color: var(--bg-color);
+            color: var(--color-text);
+            cursor: pointer;
+            transition: all 100ms ease-in-out;
+
+            &:hover {
+                background-color: var(--hover-btn-color);
+            }
+        }
+
+        #cero {
+            grid-column: span 2;
+        }
+
+        #igual {
+            grid-row: span 2;
+            background-color: var(--igual-color);
+            transition: all 100ms ease-in-out;
+
+            &:hover {
+                background-color: var(--hover-igual-color);
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--footer-color);
+
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+        a {
+            transition: all 200ms linear;
+        }
+
+        a:hover {
+            transform: skew(15deg, -0.05turn);
+        }
+
+        .fa-brands {
+            font-size: 4rem;
+            background-color: var(--color-text);
+            border: 1px solid var(--color-text);
+        }
+
+        .fa-github {
+            border-radius: 100px;
+        }
+
+        .fa-linkedin {
+            border-radius: 5px;
+            color: hsl(199, 85%, 36%);
+        }
+
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

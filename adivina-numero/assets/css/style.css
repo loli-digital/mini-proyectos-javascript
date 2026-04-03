@@ -1,0 +1,143 @@
+:root {
+    --bg-color: hsl(0, 0%, 19%);
+    --title-color: hsl(111, 100%, 54%);
+    --text-color: hsl(180, 100%, 50%);
+    --text-shadow-color: hsl(0, 0%, 63%);
+    --btn-submit-color: hsl(300, 100%, 50%);
+    --btn-reset-color: hsl(195, 100%, 50%);
+    --hover-color: hsl(60, 100%, 50%);
+    --font-family1: "Press Start 2P", system-ui;
+    --font-family2: "Play", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 50vh;
+    background-image: url("../img/stardust.png");
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 1.5rem;
+    font-family: var(--font-family1);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.layout {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: var(--title-color);
+}
+
+p, li {
+    color: var(--text-color);
+    font-family: var(--font-family2);
+    font-size: 2.5rem;
+}
+
+h1,
+p {
+    text-shadow: 0 0 4px var(--btn-submit-color);
+}
+
+#formulario {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input-number {
+    width: 40rem;
+    height: 2rem;
+    font-family: var(--font-family1);
+    border: 3px solid var(--title-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.input-number::placeholder {
+    line-height: 2rem;
+    text-align: center;
+}
+
+/*Eliminar las flechas nativas del input en Chrome, Edge y Safari*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/*Firefox*/
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.input-number:focus,
+.comprobar-resultado:focus,
+.reiniciar-juego:focus {
+    box-shadow: 2px 2px 1px var(--btn-submit-color),
+                4px 4px 1px var(--hover-color),
+                6px 6px 1px var(--text-color);
+}
+
+.input-number,
+.comprobar-resultado,
+.reiniciar-juego {
+    padding: 1rem;
+    background-color: transparent;
+    outline: none;
+    color: var(--title-color);
+    cursor: pointer;
+}
+
+.comprobar-resultado,
+.reiniciar-juego {
+    border: 5px solid transparent;
+    font-family: var(--font-family1);
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.comprobar-resultado {
+    border-color: var(--btn-submit-color);
+}
+
+.reiniciar-juego {
+    border-color: var(--btn-reset-color);
+}
+
+.comprobar-resultado:hover,
+.reiniciar-juego:hover {
+    background-color: var(--hover-color);
+    color: #000;
+}
+
+.comprobar-resultado:active,
+.reiniciar-juego:active {
+    transform: translateY(2px);
+}
+
+.historial {
+    list-style-type: none;
+}
+
+.historial li {
+    margin-bottom: 1rem;
+    color: var(--btn-reset-color);
+    font-family: var(--font-family2);
+}

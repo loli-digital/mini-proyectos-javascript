@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Adivina el número</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <main class="layout">
+
+        <h1>Adivina el número</h1>
+        <p>Estoy pensando en un número entre 1 y 100. Tienes 10 intentos.</p>
+
+        <form id="formulario">
+            <input type="number" min="1" max="100" placeholder="Elige un número del 1 al 100" class="input-number">
+            <br>
+            <div class="buttons">
+                <button type="submit" class="comprobar-resultado">Comprobar resultado</button>
+                <button type="button" class="reiniciar-juego">Reiniciar juego</button>
+            </div>
+        </form>
+
+        <p class="mensaje"></p>
+        <p>Intentos: <span class="intentos"></span></p>
+        <ul class="historial"></ul>
+
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Kode Mono", monospace;
+    background-color: wheat;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.clock__layout {
+    width: 55rem;
+    height: 25rem;
+    position: relative;
+    border-radius: 25px;
+    border: 3px solid #000;
+    background: linear-gradient(150deg,
+            #e74c3c,
+            #e67e22,
+            #f1c40f,
+            #2ecc71,
+            #2e86c1,
+            #af7ac5);
+    background-size: 200% 300%;
+    animation: change-color 30s ease infinite;
+}
+
+@keyframes change-color {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.time__layout {
+    width: calc(55rem - 15%);
+    height: calc(25rem - 25%);
+    position: absolute;
+    top: 3.15rem;
+    left: 4.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #242424;
+}
+
+.time__show {
+    font-size: 12rem;
+    color: #fff;
+}
+
+.time__day {
+    position: absolute;
+    top: 85%;
+    left: 42%;
+    font-size: 1.6rem;
+    color: white;
+}

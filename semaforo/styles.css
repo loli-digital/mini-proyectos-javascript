@@ -1,0 +1,152 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightblue;
+}
+
+.container-global {
+    width: 100%;
+    height: 70rem;
+    position: relative;
+}
+
+.sol {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top: 10rem;
+    right: 10rem;
+    background-color: gold;
+    border-radius: 100%;
+    box-shadow: 0px 0px 20px lightcoral;
+}
+
+.suelo {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 55%;
+    background-color: hsl(0, 0%, 83%);
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23d4d4d4ff'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-width='1' stroke='%230000002e' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+}
+
+.pasoCebra {
+    width: 100%;
+    height: 21rem;
+    padding-bottom: 1rem;
+    position: absolute;
+    top: 49rem;
+    background-color: #2c3e50;
+}
+
+.paso1,
+.paso2,
+.paso3,
+.paso4 {
+    width: 30rem;
+    height: 4rem;
+    margin: 1rem 0 1rem 60rem;
+    background-color: #fff;
+}
+
+.container {
+    margin: 15rem 0 0 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+}
+
+.semaforo {
+    width: 5.5rem;
+    height: 12rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2c3e50;
+    border-radius: 5px;
+}
+
+.bottomSemaforo {
+    width: 2rem;
+    height: 20rem;
+    background-color: #1c2833;
+    border-radius: 0 0 5px 5px;
+}
+
+.luz {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.rojo.activo {
+    background-color: red;
+}
+
+.amarillo.activo {
+    background-color: yellow;
+}
+
+.verde.activo {
+    background-color: green;
+}
+
+.icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-solid {
+    position: absolute;
+    font-size: 2rem;
+}
+
+.stop {
+    bottom: 8.4rem;
+}
+
+.caution {
+    bottom: 4.5rem;
+}
+
+.go {
+    bottom: 0.9rem;
+}
+
+.botonera {
+    width: 5rem;
+    height: 6rem;
+    position: absolute;
+    bottom: 7rem;
+    background-color: #2c3e50;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 1rem;
+    left: 0.4rem;
+    background-color: goldenrod;
+    border-radius: 50%;
+    border: 2px solid black;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fa-person-cane {
+    margin-top: 13rem;
+    margin-left: 30rem;
+    font-size: 20rem;
+}
