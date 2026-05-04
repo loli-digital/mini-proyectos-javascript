@@ -11,3 +11,4 @@ Lista de proyectos:
 - [puzzle-drag-and-drop](./puzzle-drag-and-drop/) — Juego de puzzle sencillo
 - [semaforo](./semaforo/) — Semáforo
 - [shopping-list](./shopping-list/) — Ejercicio lista de la compra
+- [generador-chistes](./generador-chistes/) - Generador de chistes
