@@ -1,0 +1,313 @@
+:root {
+   /*Definimos los colores para el tema light*/
+    --bg-color: hsl(344 50% 73%);
+    --secondary-color: hsl(23, 74%, 73%);
+    --input-color: #f2cb7c;
+    --text-color: hsl(0, 0%, 20%);
+    --secondary-text-color: hsl(0, 0%, 20%);
+    --icon-color: hsl(27, 40%, 33%);
+    --shadow-color: hsl(176, 38%, 77%);
+    --shadow: 2px 2px 1px var(--shadow-color);
+    --font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --theme-transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.dark__theme {
+    --bg-color: hsl(345 14% 17%);
+    --secondary-color: hsl(329 24% 48%);
+    --input-color: hsl(341 36% 30%);
+    --text-color: hsl(287 67% 92%);
+    --secondary-text-color: hsl(0 0% 100%);
+    --icon-color: hsl(287 67% 92%);
+    --shadow-color: hsl(287 67% 92%);
+    --shadow: 2px 2px 1px var(--shadow-color);
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-color);
+    font-family: 'Verdana', sans-serif;
+    transition: var(--theme-transition);
+}
+
+body.no-transition {
+    --theme-transition: none; 
+}
+
+.layout {
+    width: 70rem;
+    min-height: 100dvh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    gap: 4rem;
+}
+
+/*Header styles*/
+.header__layout {
+    width: 60rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout__title {
+    margin-left: 4rem;
+    width: 100%;
+    text-align: center;
+}
+
+.list__title {
+    font-size: 3rem;
+    font-family: var(--font-family);
+    color: var(--text-color);
+}
+
+/*Button dark and light theme*/
+#theme-toggle {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    box-shadow: inset 0px 0px 5px var(--input-color);
+    background-color: var(--icon-color);
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 300ms linear;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+#theme-toggle span:last-child {
+    display: none;
+}
+
+.dark__theme #theme-toggle span:first-child{
+    display: none;
+}
+
+.dark__theme #theme-toggle span:last-child{
+    display: block;
+}
+
+/*List styles*/
+
+.list__layout {
+    width: 60rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form {
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+input[type=text] {
+    width: calc(60rem - 5.1rem);
+    height: 4rem;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+    font-family: 'Verdana', sans-serif;
+    background-color: var(--secondary-color);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+input[type=text]::placeholder {
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+
+input[type=text]:focus {
+    color: var(--text-color);
+    transition: all 200ms ease-in-out;
+    box-shadow: 5px 5px 1px var(--shadow-color);
+}
+
+.btn__add__task {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.icon__add__task {
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 3rem;
+    background-color: var(--secondary-color);
+    color: var(--icon-color);
+    box-shadow: var(--shadow);
+}
+
+.icon__add__task:hover {
+    transition: all 300ms ease-in-out;
+    transform: scale(1.2);
+}
+
+ul.show__list__task {
+    width: calc(60rem - 3rem);
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+li.task__added {
+    width: calc(60rem - 6rem);
+    height: auto;
+    padding: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+li.task__added>span.align__icons {
+    margin-left: auto;
+}
+
+/*Acordeón tareas terminadas*/
+.list__completed {
+    width: calc(60rem - 5rem);
+    height: auto;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+summary.text__completed {
+    color: var(--text-color);
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+ul.completed__list__task {
+    width: 100%;
+    padding-left: 0;
+}
+
+li.task__completed {
+    width: calc(60rem - 7.5rem);
+    height: auto;
+    margin-bottom: 1rem;
+    text-decoration: line-through;
+    background-color: var(--input-color);
+}
+
+/*Botones añadir, rehacer eliminar*/
+
+span.align__icons {
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.btn__finished,
+.btn__delete,
+.btn__undo {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.icon__finished,
+.fa-trash-can,
+.fa-rotate-left {
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    transition: all 300ms ease-in-out;
+}
+
+.icon__finished,
+.fa-trash-can,
+.fa-rotate-left {
+    color: var(--icon-color);
+}
+
+.icon__finished:hover,
+.fa-trash-can:hover,
+.fa-rotate-left:hover {
+    transform: scale(1.5);
+}
+
+/*Footer*/
+.footer {
+    text-align: center;
+}
+
+.footer p {
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+}
+
+.fa-heart {
+    transition: all 300ms ease-in-out;
+    animation: change-color 5s ease-in-out infinite;
+}
+
+.fa-heart:hover {
+    transform: scale(1.1);
+}
+
+@keyframes change-color {
+    0% {
+        color: #9f6c9b
+    }
+
+    50% {
+        color: #7d177d
+    }
+
+    100% {
+        color: #9f6c9b
+    }
+}
